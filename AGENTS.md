@@ -506,6 +506,7 @@ Full guide: `docs/vm-docker.md`. Short version:
 - Ports for slot n (n=1-3): API 57000+100n, Kuma +2, Mailhog UI +25, SMTP +26, Postgres +32, Redis +79. TipSignal and vitalos-platform share the VM: never stop or remove their containers. Never open ports in the Oracle firewall; use the tunnel.
 
 <!-- pulse:start (managed by vitalos-op pulse/kit/install.sh; edit there) -->
+
 ## Pulse: every session reports here
 
 This repository reports to Vitalos Pulse through `.pulse/`. Every session and agent follows `.pulse/README.md`:
@@ -515,4 +516,5 @@ This repository reports to Vitalos Pulse through `.pulse/`. Every session and ag
 - **Update `.pulse/STATUS.md`** when the project's stage, health, next steps, needs or blockers change.
 - **Never put secret values in `.pulse/`**; name the variable instead.
 - **This repository is public.** Nothing in `.pulse/` may hold security findings, internal hosts or IP addresses, email addresses, customer names, spend or unannounced plans; put those in a Pulse note (`create_note`) instead.
+
 <!-- pulse:end -->
