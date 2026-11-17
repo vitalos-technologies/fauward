@@ -14,14 +14,12 @@ updated_by: session_01Cr6fhcy2Ch1rivzTMCj8ek (engineering); seeded from the Puls
 # Fauward: status
 
 ## Summary
-Fauward is a multi-tenant, white-label B2B SaaS that gives logistics businesses their own branded platform: shipments, tracking, rating, labels, customs, returns, an agent PWA and AI-assisted support, plus a staff console. The release with the rebuilt console (Phases 0-5) has been live since 22 Oct 2026. What is left is mostly owner follow-ups after the hosting move and a few product gaps.
+Fauward is a multi-tenant, white-label B2B SaaS that gives logistics businesses their own branded platform: shipments, tracking, rating, labels, customs, returns, an agent PWA and AI-assisted support, plus a staff console. The release with the rebuilt console (Phases 0-5) has been live since 22 Oct 2026.
 
 ## Now
 
 ## Next
-- Owner follow-ups after the hosting move
-- Merge or drop the Google OAuth keep-alive branch (claude/vibrant-planck-yujpkq)
-- Product gaps and hardening items
+- Other follow-ups: tracked privately on Pulse.
 
 ## Needs Temitope
 - Tracked privately on Pulse (this repository is public).
