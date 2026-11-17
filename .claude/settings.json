@@ -23,6 +23,15 @@
             "command": "bash .claude/hooks/SessionStart.sh"
           }
         ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.pulse/bin/session-start\" 2>/dev/null || true",
+            "timeout": 10
+          }
+        ]
       }
     ],
     "PreCompact": [

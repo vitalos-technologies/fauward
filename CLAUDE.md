@@ -112,3 +112,15 @@ Full guide: `docs/vm-docker.md`. Short version:
 - Status and logs: `bash scripts/vm-slot.sh status <slot>`, `logs <slot> [service]`.
 - Mail catcher: the mailhog image is x86-only and crashes on the ARM VM, so `docker-compose.remote.yml` swaps in Mailpit (UI `:8025`, SMTP `:1025`, same ports; the compose service is still named `mailhog`). Never switch it back.
 - Ports for slot n (n=1-3): API 57000+100n, Kuma +2, Mailhog UI +25, SMTP +26, Postgres +32, Redis +79. TipSignal and vitalos-platform share the VM: never stop or remove their containers. Never open ports in the Oracle firewall; use the tunnel.
+
+<!-- pulse:start (managed by vitalos-op pulse/kit/install.sh; edit there) -->
+## Pulse: every session reports here
+
+This repository reports to Vitalos Pulse through `.pulse/`. Every session and agent follows `.pulse/README.md`:
+
+- **Start** with `.pulse/bin/pulse start "<one line: what you are doing>"`. It creates your session file in `.pulse/sessions/`.
+- **Keep it current** after each major step, when blocked and before you stop (`pulse log`, `next`, `need`, `blocker`, `status`, `done`). Commit it with your work and push your branch at least once per work block, even unfinished.
+- **Update `.pulse/STATUS.md`** when the project's stage, health, next steps, needs or blockers change.
+- **Never put secret values in `.pulse/`**; name the variable instead.
+- **This repository is public.** Nothing in `.pulse/` may hold security findings, internal hosts or IP addresses, email addresses, customer names, spend or unannounced plans; put those in a Pulse note (`create_note`) instead.
+<!-- pulse:end -->
